@@ -1,0 +1,23 @@
+{% extends "webapp/base.html" %}
+{% load static %}
+
+{% block content %}
+<section class="Sect_reg_form">
+    <form method="post" action="" class="Reg_form">
+        
+        {% csrf_token %}
+
+        
+
+        {{form}} <br>
+        <input type="submit" value="Login">
+
+    </form>
+    {% if messages %}
+    
+        {% for message in messages %}
+            <span class="error_msg">{{message}}</span>
+        {% endfor %}
+    {% endif %}
+</section>
+{% endblock %}

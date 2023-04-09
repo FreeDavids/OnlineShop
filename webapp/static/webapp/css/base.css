@@ -1,0 +1,241 @@
+.nav {
+    text-align: center;
+    padding-top: 15px;   
+} 
+
+.nav li {
+    display: inline-block;
+    text-transform: uppercase;
+    padding-inline: 35px;
+    font-family:'Lucida Sans';
+    color: black;       
+}
+
+.nav_a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.nav li:hover {
+    color:aquamarine;
+    font-size: 15px;
+}
+
+.aut {
+    font-family: 'Lucida Sans';
+    float: right;
+    margin-right: 15px;
+}
+
+#banner {
+    background-image: url("jungle.jpg");
+    min-height: 300px;
+}
+
+#banner h1 {
+    text-align: center;
+    color: white;
+    font-family: Helvetica;
+    font-size: 55px;
+    padding-top: 100px;
+}
+
+#instruments {
+    text-align: center;
+    padding: 200px 100px;    
+}
+
+#instruments  div {
+    display: inline-block;
+    width: 30%;
+    height: auto;
+    margin: 0px 5px;
+    border: 1px solid lightgray;    
+}
+
+#instruments h3 {
+    border: 1px solid lightgray;
+    background-color: lightgray;    
+}
+
+.image img {
+    padding: 5px 5px;
+}
+
+.image img:hover {
+    width: 50%;
+}
+
+ #instruments p {
+    padding: 5px 5px;
+    max-height: 200px;
+    overflow: scroll;
+}
+
+.services_title {
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(64, 99, 82);
+    font-size: 48px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    margin-top: 75px;
+    margin-bottom: 150px;
+}
+
+.service_display {
+    text-align: center;
+    margin: 50px 0px;
+    background-color: lightgray;
+    border-radius: 15px;
+    width: 500px;
+    position: relative;
+    left: 30%;
+}
+
+.service_display div {
+    display: inline-block;
+    text-align: center;
+}
+
+.shop_section {
+    margin: auto 20px;
+    border-top: 1px solid gray;
+}
+
+.products_section {
+    margin: auto;
+    text-align: left;
+    padding: 10px 5px;
+}
+
+.products_display {
+    display: inline-block;
+    text-align: center;
+    margin: 15px auto;
+    background-color: lightgray;
+    border-radius: 15px;
+    width: 300px;
+    padding-bottom: 10px;
+}
+
+.products_display div {
+    text-align: center;
+    margin: auto;
+}
+
+.products_content h2{
+    margin: auto;
+    padding-bottom: 5px; 
+}
+
+.products_content p {
+    margin: auto;
+    padding: 2px;
+}
+
+.products_content a {
+    padding: 4px 8px;
+    border-radius: 7px;  
+}
+
+.add_button {
+    background-color: rgb(132, 212, 159);
+    text-decoration: none;
+    color: white;
+}
+
+#categorindex {
+    background-color: aquamarine;
+    text-align: center;
+    width: 75%;
+    margin: auto;
+    padding: 3px 0px;
+}
+
+.categorlink {
+    text-decoration: none;
+    color: black;
+}
+
+.categorlink:hover {
+    text-decoration: underline;
+    color: gray;
+}
+
+#form_container {
+    background-color: lightgrey;
+    width: 45%;
+    margin: auto;
+}
+
+.table_form {
+    margin: auto;
+    padding: 20px 10px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.form {
+    text-align: center;
+    margin-bottom: 75px;
+}
+
+.cart {
+    float: right;
+    margin: 20px 6%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+.cart div {
+    margin: auto;
+}
+
+.table {
+    border-bottom: 1px solid gray;
+}
+
+.table th {
+    border-bottom: 1px solid gray;
+    border-top: 1px solid gray;
+    padding: 10px;
+}
+
+.Sect_reg_form {
+    width: 15%;
+    margin: 20px auto;
+}
+
+.Reg_form {
+    background-color: rgb(44, 129, 129);
+    border-radius: 7px;
+    margin: auto;
+    padding: 15px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.Reg_form input {
+    margin: 10px;
+}
+
+.error_msg {
+    color: red;
+}
+
+footer {
+    position: fixed bottom;
+    text-align: center;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 1px;
+}
+
+.foot li {
+    display: inline-block;
+    width: 25%;
+}

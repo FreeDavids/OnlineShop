@@ -1,0 +1,46 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th colspan="3">Shopping Cart</th>
+        </tr>
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% if request.session.cart.items %}
+            {% for key, value in request.session.cart.items %}
+                <tr>
+                    <td>{{value.name}}</td>
+                    <td>{{value.quantity}}
+                        <a href="{% url 'cart:add' value.product_id %}" style="text-decoration: none; color: black;">+</a>
+                        <a href="{% url 'cart:subtract' value.product_id %}" style="text-decoration: none; color: black;">-</a>
+                    </td>
+                    <td>
+                        {{value.price}} €                        
+                    </td>
+                </tr>
+            {% endfor %}
+        {% else %}
+            <tr>
+                <td colspan="3">
+                    <div>
+                        No products selected
+                    </div>
+                </td>
+            </tr>
+        {% endif %}
+    </tbody>
+    <tfoot>
+        <tr>
+            <td><h4>Total: {{cart_total_import}} €</h4></td>
+        </tr>
+        {% if request.session.cart.items %}
+        <tr>
+            <td colspan="3"><a href="#" class="add_button" style="padding: 5px; border-radius: 7px;">Make an order</a></td>
+        </tr>
+        {% endif %}
+    </tfoot>
+</table>

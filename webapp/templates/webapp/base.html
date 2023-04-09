@@ -1,0 +1,52 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="{% static 'webapp/css/base.css' %}">
+
+</head>
+
+<body>
+    <nav>
+        <ul class="nav">
+            <li><a class="nav_a" href="{% url 'Home' %}">Home</a></li>
+            <li><a class="nav_a" href="{% url 'Shop' %}">Shop</a></li>
+            <li><a class="nav_a" href="{% url 'Services' %}">Services</a></li>
+            <li><a class="nav_a" href="{% url 'Blog' %}">Blog</a></li>
+            <li><a class="nav_a" href="{% url 'Contact' %}">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="aut">    
+            {% if user.is_authenticated %}
+                Hi: {{ user.username }} &nbsp;&nbsp;&nbsp; <a href="{% url 'log_out' %}">Log out</a>
+            {% else %}
+                <a href="{% url 'log_in' %}">Login</a> &nbsp;&nbsp;&nbsp; <a href="{% url 'Authentication' %}">Register</a>
+            {% endif %}
+    </div>    
+    <header>
+        <div id="banner">
+            <h1>Wood Sounds</h1>
+        </div>
+    </header>
+{% block content %}
+
+{% endblock %}
+
+
+    <footer>
+        <h4>Thanks for the visit</h4>
+        <div class="foot">
+            <li><h5>Developed by FreeD</h5></li>
+            <li><p>All rights reserved 2023</p></li>
+        </div>
+    </footer>
+
+</body>
+
+</html>

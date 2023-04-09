@@ -1,0 +1,22 @@
+{% extends "webapp/base.html" %}
+{% load static %}
+
+{% block content %}
+<main>
+    <h1>Contact</h1>
+    <div id="form_container">
+        
+        {% if "valid" in request.GET %}
+        
+        <p>Thank you, your message has been submitted succesfully</p>
+
+        {% endif %}
+
+        <form class="form" action="" method="POST">
+            {% csrf_token %}
+            <table class="table_form">{{myform}}</table>
+            <input type="submit" value="Submit" style="width: 130px; margin-bottom: 15px;">
+        </form>
+    </div>
+</main>
+{% endblock %}

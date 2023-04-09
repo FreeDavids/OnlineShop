@@ -1,0 +1,47 @@
+{% extends "webapp/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<main>
+    <h1>Shop</h1>
+    <section class="shop_section">    
+        <section class="cart">
+            <div>
+                {% if request.user.is_authenticated %}
+                    {% include "cart/widget.html" %}
+                {% else %}
+                    You must log in
+                
+                {% endif %}
+            </div>
+        </section>
+        <section class="products_section">
+            
+            {% for product in products %}
+                <div class="products_display">
+                    <div>
+                        <p><img src="{{product.image.url}}" alt="Product image"
+                                style="width: 250px; height: auto; border-radius: 13px; border: 5px solid rgb(152, 203, 181);"></p>
+                    </div>
+                    <div class="products_content">
+                        <h2>{{product.name}}</h2>
+                        <p>{{product.category}}</p>
+                        <p>{{product.price}} €</p>
+                        <p>
+                            {% if product.availability == True %}
+                                Available
+                            {% endif %}
+                        </p>
+                        <p></p>
+                        <a href="{% url 'cart:add' product.id %}" class="add_button">Add product to cart</a>
+                    </div>
+                    
+                
+                </div>
+            {% endfor %}
+        </section>
+    </section>
+</main>
+
+{% endblock %}
