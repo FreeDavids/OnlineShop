@@ -27,6 +27,11 @@
     margin-right: 15px;
 }
 
+.aut a {
+    text-decoration: none;
+    color: rgb(56, 176, 154);
+}
+
 #banner {
     background-image: url("jungle.jpg");
     min-height: 300px;
